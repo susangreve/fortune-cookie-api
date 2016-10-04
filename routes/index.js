@@ -1,10 +1,15 @@
 var express = require('express');
 var router = express.Router();
 
+var path = require('path');
 var fs = require('fs');
 
-console.log("I'm a horrible human being.")
-var theFile = fs.readFileSync("../public/fortunes/fortunes.txt").toString();
+console.log("I'm a horrible human being.");
+
+var myDirectory = process.cwd();
+var theFilename = path.join(myDirectory, "../public/fortunes/fortunes.txt");
+var theFile = fs.readFileSync(theFilename).toString();
+
 global.fortunes = theFile.split("%");
 console.log("all done");
 
