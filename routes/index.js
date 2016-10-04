@@ -6,8 +6,8 @@ var fs = require('fs');
 
 console.log("I'm a horrible human being.");
 
-var myDirectory = process.cwd();
-var theFilename = path.join(myDirectory, "../public/fortunes/fortunes.txt");
+
+var theFilename = path.join(__dirname, "../public/fortunes/fortunes.txt");
 var theFile = fs.readFileSync(theFilename).toString();
 
 global.fortunes = theFile.split("%");
