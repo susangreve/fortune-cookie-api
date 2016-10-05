@@ -20,6 +20,15 @@ router.get('/', function(req, res, next) {
 
 /* GET fortune  */
 router.get('/api/fortune', function(req, res, next) {
+
+	res.send({
+		ok: false,
+		message: global.getFortune()
+	});
+});
+
+
+global.getFortune = function() {
 	var fortune;
 	var numLines = 3;//global.fortunes.length;
 	var index = Math.round(Math.random() * numLines);
@@ -28,13 +37,7 @@ router.get('/api/fortune', function(req, res, next) {
 	if (line) {
 		line = line.trim();
 	}
-
-	res.send({
-		ok: false,
-		message: line
-	});
-});
-
-
+	return line;
+};
 
 module.exports = router;
