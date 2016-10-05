@@ -11,4 +11,4 @@ this project is really something else
 
 
 Hi Susan!
-
+ [![Build Status](https://travis-ci.org/susangreve/fortune-cookie-api.svg?branch=master)](https://travis-ci.org/susangreve/fortune-cookie-api)
