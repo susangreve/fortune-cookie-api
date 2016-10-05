@@ -33,7 +33,7 @@ describe('fortuneApi', function() {
 			unique[key] = true;
 		}
 
-		assert.ok();
+		assert.ok(true);
 	});
 
 });

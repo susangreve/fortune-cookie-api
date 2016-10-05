@@ -30,7 +30,7 @@ router.get('/api/fortune', function(req, res, next) {
 
 global.getFortune = function() {
 	var fortune;
-	var numLines = 3;//global.fortunes.length;
+	var numLines = global.fortunes.length;
 	var index = Math.round(Math.random() * numLines);
 	var line = global.fortunes[index];
 
